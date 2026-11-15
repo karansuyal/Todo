@@ -11,6 +11,7 @@ app.use(express.json());
 let tasks = [{ id: 1, text: "Project GitHub par push karo", done: false }];
 
 app.get("/", (req, res) => res.send("Backend Running"));
+app.get("/health", (req, res) => res.send("OK")); 
 app.get("/api/tasks", (req, res) => res.json(tasks));
 
 app.post("/api/tasks", (req, res) => {
